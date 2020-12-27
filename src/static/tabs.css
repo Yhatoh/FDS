@@ -1,0 +1,19 @@
+.custom-tabs a {
+    background-color: #235789;
+    color: #FDFFFC;
+    border-radius: 0px !important;
+    border: 0 !important;
+    /*border-style: solid;
+    border-color: #020100 !important;*/
+}
+
+.custom-tabs a:focus,
+.custom-tabs a:hover {
+	background-color: #448CCF;
+}
+
+.custom-tabs a.active {
+	border-radius: 3px !important;
+	background-color: #448CCF !important;
+	color: #FDFFFC !important;
+}

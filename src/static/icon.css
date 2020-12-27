@@ -1,0 +1,28 @@
+.icon-left{
+    float: left;
+}
+.icon-pad{
+    padding-left: 5%;
+}
+.icon-marg-bot{
+    margin-bottom: 5%;
+}
+.icon-right{
+    float: right;
+}
+.crown{
+    position:relative;
+    float: right;
+    right:40px;
+    bottom:5px;
+}
+.wrapper {
+    position: relative;
+
+}
+.infoi {
+    position: absolute;
+    top: -58px;
+    right: -15px;
+   
+}

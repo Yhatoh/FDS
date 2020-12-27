@@ -1,0 +1,39 @@
+.project_card {
+	background-color: #020100; 
+	color: #FDFFFC;
+	height: 400px;
+	margin-bottom: 10%; 
+}
+.winner_card {
+	background-color: #D4AF37; 
+	color: #FDFFFC;
+	height: 500px;
+	margin-bottom: 10%; 
+}
+.category1 {
+	color: #1ADF2E;
+}
+
+.category2 {
+	color: #2790FF;
+}
+
+.project_card_text {
+	font-size: 12px;
+}
+.winner_title{
+	background-color: #43360e;
+}
+.winner_text{
+	color:#FFFFFF;
+	border-radius: 20px;
+	height: 30px;
+	text-align: center;
+}
+.try {
+	text-align: justify;
+	height: 100%;
+}
+.mlm{
+	margin-left: 7%;
+}
