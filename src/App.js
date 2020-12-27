@@ -391,7 +391,8 @@ class App extends Component {
 	      	</>
 	      }
 	      </div>
-	      <Footer />
+	      <Footer/>
+		  <div id = "final" ></div>
 	    </>
 	  );
 	}
