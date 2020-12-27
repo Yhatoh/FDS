@@ -27,7 +27,7 @@ class Timeline extends Component {
 
   click(e){
   	const year = (e === 2 ? "2019" : (e === 1 ? "2018" : "2017"))
-  	window.location.href = "/ano-anteriores/"+ year
+  	window.location.href = "/"+ year
   	console.log(e)
   }
 
@@ -50,10 +50,10 @@ class Timeline extends Component {
 		    	
 				<Row className = "footerr">
 					<Col xs={12} sm={12} md={12} lg={6} xl={6}>
-						<Winner className="mlm" xd = {this.state.data2019.IA[1]}></Winner>
+					<Winner className="mlm" xd = {this.state.data2019.IA[1]}></Winner>
 					</Col>
 					<Col xs={12} sm={12} md={12} lg={6} xl={6}>
-						<Winner xd = {this.state.data2019.TD[6]}></Winner> 
+					<Winner xd = {this.state.data2019.TD[6]}></Winner> 
 					</Col>
 				</Row>
 				:
@@ -61,20 +61,20 @@ class Timeline extends Component {
 
 				<Row className = "footerr">
 					<Col xs={12} sm={12} md={12} lg={6} xl={6}>
-						<Winner className="mlm" xd = {this.state.data2018.IA[4]}></Winner>
+					<Winner className="mlm" xd = {this.state.data2018.IA[4]}></Winner>
 					</Col>
 					<Col xs={12} sm={12} md={12} lg={6} xl={6}>
-						<Winner xd = {this.state.data2018.TD[6]}></Winner> 
+					<Winner xd = {this.state.data2018.TD[6]}></Winner> 
 					</Col>
 				</Row>
 			 :
 		    
 				  <Row className = "footerr">
 					  <Col xs={12} sm={12} md={12} lg={6} xl={6}>
-					  	<Winner className="mlm"  xd = {this.state.data2017.IA[2]}></Winner>
+					  <Winner className="mlm"  xd = {this.state.data2017.IA[2]}></Winner>
 					  </Col>
 					  <Col xs={12} sm={12} md={12} lg={6} xl={6}>
-					  	<Winner xd = {this.state.data2017.IA[5]}></Winner> 
+					  <Winner xd = {this.state.data2017.IA[5]}></Winner> 
 					  </Col>
 				  </Row>
 			    )

@@ -23,20 +23,21 @@ class Project extends Component {
     	<Card className="mt-2 mb-3 project_card">
     		<Card.Body className="mb-5">
 			    <Row> 
-						<Col xs = "9">
-							<Card.Title>{this.state.project.name} </Card.Title>
-						</Col>
-						<Col>
-							<Row>
-								<Col xs = "1"></Col>
-								<Col>
-									<a href="https://www.google.com"><RiFacebookBoxFill  className= 'icon-pad'size = "1.1em"/></a>
-									<a href="https://www.google.com"><RiInstagramLine className= 'icon-pad'  size = "1.1em"/></a>
-								</Col>
-							</Row>
-						</Col>
-						
-					</Row>
+					<Col xs = "9">
+						<Card.Title>{this.state.project.name} </Card.Title>
+					</Col>
+
+					<Col>
+						<Row>
+							<Col xs = "1"></Col>
+							<Col>
+								<a href="https://www.google.com"><RiFacebookBoxFill  className= 'icon-pad'size = "1.1em"/></a>
+								<a href="https://www.google.com"><RiInstagramLine className= 'icon-pad'  size = "1.1em"/></a>
+							</Col>
+						</Row>
+					</Col>
+					
+				</Row>
 			  	<Card.Text className={"category" + (this.state.project.type === 1 ? "1": "2")}>
 			  		{this.state.project.categoria}
 			  	</Card.Text>
