@@ -15,8 +15,8 @@ import { MdMail } from 'react-icons/md';
 function Footer() {
   return (
     <>
-		<footer className = "footer">
-				<Row>
+		<footer className = "footerr">
+				<Row className = "footer">
 					<Col></Col>
 					<Col>
 					<div className = "headerFooter" >Organiza</div>
@@ -25,7 +25,7 @@ function Footer() {
 					<Col></Col>
 				</Row>
 
-				<Row>
+				<Row className = "footer">
 					<Col xs = "3"></Col>
 					<Col><ResponsiveImage
 						src= { org }
@@ -34,7 +34,7 @@ function Footer() {
 					<Col xs = "1"></Col>
 					<Col xs = "1"></Col>
 				</Row>
-				<Row>
+				<Row className = "footer">
 					<Col></Col>
 					<Col>
 					<div className = "headerFooter" >Auspicia</div>
@@ -42,7 +42,7 @@ function Footer() {
 					<Col></Col>
 					<Col></Col>
 				</Row>
-				<Row>
+				<Row className = "footer">
 					<Col xs = "3"></Col>
 					<Col>
 						<ResponsiveImage
@@ -53,7 +53,7 @@ function Footer() {
 					<Col xs = "1"></Col>
 					<Col xs = "1"></Col>
 				</Row>
-				<Row>
+				<Row className = "footer">
 					<Col></Col>
 					<Col>
 					<div className = "headerFooter" >Patrocina</div>
@@ -61,7 +61,7 @@ function Footer() {
 					<Col></Col>
 					<Col></Col>
 				</Row>
-				<Row>
+				<Row className = "footer">
 				<Col xs = "3"></Col>
 				<Col>
 					<ResponsiveImage
@@ -74,7 +74,7 @@ function Footer() {
 				</Row>
 			
 
-			<Row className="bg-dark">
+			<Row className="bg-dark rowcustom" width = "98%">
 				<Col xs = "3"></Col>
 				<Col xs = "2"> 
 					<br></br>
