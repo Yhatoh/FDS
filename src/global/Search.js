@@ -62,13 +62,20 @@ class Search extends Component {
     });
   };
 
-  onDone = () =>{
-      let nombre = this.state.value
+  onDone = (event, { suggestion, suggestionValue, suggestionIndex, sectionIndex, method }) =>{
+      let nombre = suggestionValue
       let aux = nombre.split(" ")
       nombre = aux.join("_")
       window.location.href = "/"+ nombre
 
   }
+  onDone2 = (m) =>{
+    let nombre = this.state.value
+    let aux = nombre.split(" ")
+    nombre = aux.join("_")
+    window.location.href = "/"+ nombre
+
+}
   render(){
    
         const { value, suggestions } = this.state;
@@ -94,7 +101,7 @@ class Search extends Component {
             theme={theme}
             onSuggestionSelected={this.onDone}
           /> 
-          <Button variant="outline-info" onClick = {this.onDone}>Buscar</Button>
+          <Button variant="outline-info" onClick = {this.onDone2}>Buscar</Button>
         </Row>
         </div>
         );
