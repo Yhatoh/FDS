@@ -9,6 +9,7 @@
     "bootstrap": "^4.5.3",
     "build": "^0.1.4",
     "react": "^17.0.1",
+    "react-autosuggest": "^10.0.4",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
     "react-horizontal-timeline": "^1.5.3",

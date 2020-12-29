@@ -9,7 +9,7 @@ import {BiCaretRightCircle} from 'react-icons/bi';
 import '../static/icon.css';
 import {RiFacebookBoxFill} from 'react-icons/ri';
 import {RiInstagramLine} from 'react-icons/ri';
-class Project extends Component {
+class Buscado extends Component {
 
   constructor(props){
     super(props)
@@ -20,7 +20,11 @@ class Project extends Component {
 
   render(){
     return (
-    	<Card className="mt-2 mb-3 project_card">
+    <Row className = "specialrow">
+	<Col></Col>
+	<Col></Col>
+    <Col xs={12} sm={12} md={6} lg={6} xl={6}>  
+    	<Card className="mt-2 mb-3  project_card">
     		<Card.Body className="mb-5">
 			    <Row> 
 					<Col xs = "9">
@@ -57,8 +61,12 @@ class Project extends Component {
 			  </Card.Body>
 				<Row><Col xs="10"></Col><Col><a href={this.state.project.web}><BiCaretRightCircle className='icon-left icon-marg-bottom' size = "2em"></BiCaretRightCircle></a></Col></Row>
 			</Card>
+        </Col>
+		<Col></Col>
+		
+         </Row>
     );
   }
 }
 
-export default Project;
+export default Buscado;

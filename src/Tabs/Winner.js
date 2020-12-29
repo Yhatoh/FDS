@@ -50,8 +50,8 @@ class Winner extends Component {
 						<Row>
 							<Col xs = "1"></Col>
 							<Col>
-								<a href="https://www.google.com"><RiFacebookBoxFill  className= 'icon-pad'size = "1.1em"/></a>
-								<a href="https://www.google.com"><RiInstagramLine className= 'icon-pad'  size = "1.1em"/></a>
+								<a href={this.state.project.fb}><RiFacebookBoxFill  className= 'icon-pad'size = "1.1em"/></a>
+								<a href={this.state.project.ig}><RiInstagramLine className= 'icon-pad'  size = "1.1em"/></a>
 							</Col>
 						</Row>
 					</Col>
@@ -74,7 +74,7 @@ class Winner extends Component {
 			      {this.state.project.descripcion}
 			    </Card.Text>
 			  </Card.Body>
-				<Row><Col xs="10"></Col><Col><BiCaretRightCircle className='icon-left icon-marg-bottom' size = "2em"></BiCaretRightCircle></Col></Row>
+				<Row><Col xs="10"></Col><Col><a href={this.state.project.web}><BiCaretRightCircle className='icon-left icon-marg-bottom' size = "2em"></BiCaretRightCircle></a></Col></Row>
 			</Card>
         <img className="infoi" border="0" alt="W3Schools" src="https://png.pngtree.com/svg/20170904/the_golden_crown_309708.png" width="80" height="90"/>
         </Card.Body>

@@ -6,8 +6,9 @@ import Nav from 'react-bootstrap/Nav';
 import ResponsiveImage from '../global/ResponsiveImage.js';
 import fesw from '../img/feswLogo.png';
 import '../static/quetoyhaciendo.css';
+import Search from '../global/Search.js';
 
-function NavTop() {
+function NavTop(props) {
   return (
     <>
 		  <Navbar bg="dark" variant="grey" expand="lg">
@@ -22,10 +23,8 @@ function NavTop() {
 		      <Nav.Link href="2019">Años Anteriores</Nav.Link>
 		      <Nav.Link href="#final">Contacto</Nav.Link>
 		    </Nav>
-		    <Form inline>
-		      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-		      <Button variant="outline-info">Search</Button>
-		    </Form>
+			<Search actual={props.actual}/>
+	
 			</Navbar.Collapse>
 		  </Navbar>
 
