@@ -11,7 +11,7 @@ const getSuggestions = value => {
     const inputLength = inputValue.length;
   
     return inputLength === 0 ? [] : proyectos.filter(lang =>
-      lang.name.toLowerCase().slice(0, inputLength) === inputValue
+      lang.toLowerCase().slice(0, inputLength) === inputValue
     );
   };
 
@@ -20,7 +20,7 @@ const getSuggestions = value => {
 // Use your imagination to render suggestions.
 const renderSuggestion = suggestion => (
   <div>
-    {suggestion.name}
+    {suggestion}
   </div>
 );
 class Search extends Component {
@@ -31,15 +31,19 @@ class Search extends Component {
         value: '',
         suggestions: []
     };
-    proyectos = this.props.actual.IA.concat(this.props.actual.TD);
-
+    //proyectos = this.props.actual.IA.concat(this.props.actual.TD);
+    proyectos = []
+    this.props.actual[0].proyectos.map((proyecto)=>(proyectos.push(proyecto.name + " - 2020"))) 
+    this.props.actual[1].proyectos.map((proyecto)=>(proyectos.push(proyecto.name + " - 2019"))) 
+    this.props.actual[2].proyectos.map((proyecto)=>(proyectos.push(proyecto.name + " - 2018"))) 
+    this.props.actual[3].proyectos.map((proyecto)=>(proyectos.push(proyecto.name + " - 2017")))
   }
   getSuggestionValue = suggestion => {
     this.setState({
-        value : suggestion.name
+        value : suggestion
     });
     console.log(this.state.value)
-    return suggestion.name
+    return suggestion
     }
   onChange = (event, { newValue }) => {
     this.setState({
@@ -63,14 +67,14 @@ class Search extends Component {
   };
 
   onDone = (event, { suggestion, suggestionValue, suggestionIndex, sectionIndex, method }) =>{
-      let nombre = suggestionValue
+      let nombre = suggestionValue.split(" - ")[0]
       let aux = nombre.split(" ")
       nombre = aux.join("_")
       window.location.href = "/"+ nombre
 
   }
   onDone2 = (m) =>{
-    let nombre = this.state.value
+    let nombre = this.state.value.split(" - ")[0]
     let aux = nombre.split(" ")
     nombre = aux.join("_")
     window.location.href = "/"+ nombre

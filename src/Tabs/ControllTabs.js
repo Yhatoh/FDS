@@ -40,7 +40,7 @@ class ControllTabs extends Component {
               { this.state.gen.map((project) =>
                 <Col xs={12} sm={6} md={6} lg={4} xl={4}>
                   <div key={project.code}>
-                    <Project xd={project} />
+                    <Project xd={project} key = {project.code}/>
                   </div>
                 </Col>
               )}
@@ -54,7 +54,7 @@ class ControllTabs extends Component {
                 { this.state.cat1.map((project) =>
                   <Col xs={12} sm={6} md={6} lg={4} xl={4}>
                     <div key={project.code}>
-                      <Project xd={project} />
+                      <Project xd={project} key = {project.code}/>
                     </div>
                   </Col>
                 )}
@@ -68,7 +68,7 @@ class ControllTabs extends Component {
                 { this.state.cat2.map((project) =>
                   <Col xs={12} sm={6} md={6} lg={4} xl={4}>
                     <div key={project.code}>
-                      <Project xd={project} />
+                      <Project xd={project} key = {project.code}/>
                     </div>
                   </Col>
                 )}

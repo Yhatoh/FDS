@@ -500,45 +500,26 @@ class App extends Component {
 		console.log(buscado)
 		console.log(info)
 		let i;
-		for (const object in info.IA){
-			if(info.IA[object].name === buscado){
+		for (const object in info){
+			if(info[object].name === buscado){
 				
 				encontrado = buscado
-				objeto = info.IA[object]
+				objeto = info[object]
 			}
 			console.log("XDDD")
 		}
-		for (const object2 in info.TD){
-			console.log(buscado)
-			console.log(info.TD[object2])
-			if(info.TD[object2].name === buscado){
-				encontrado = buscado
-				objeto = info.TD[object2]
-			}
-		}
-
+		
 		return (encontrado === "") ? <h1>404 PAGE NOT FOUND</h1> : <Buscado xd={objeto}/>
 
 
 	}
 	render(){
+
+
 		let url = window.location.href.split("/")
 		url = url[url.length - 1]
-		let data
-		switch (url) {
-			case "2019":
-				data = this.state.data2019
-				break;
-			case "2018":
-				data = this.state.data2018
-				break;
-			case "2017":
-				data= this.state.data2017
-				break;
-			default:
-				data= this.state.data2020
-				break;
-		}
+		var data = [{anos:'2020', proyectos: this.state.data2020.IA.concat(this.state.data2020.TD)}, {anos:'2019', proyectos: this.state.data2019.IA.concat(this.state.data2019.TD)},
+		{anos:'2018', proyectos: this.state.data2018.IA.concat(this.state.data2018.TD)}, {anos:'2017', proyectos: this.state.data2017.IA.concat(this.state.data2017.TD)}]
 	  return (
 	  	<>
 		  
@@ -557,7 +538,7 @@ class App extends Component {
 				cat1={this.state.data2020.IA} 
 				cat2={this.state.data2020.TD}/> 
 				</>
-			: this.onSearch(data,url)
+			: this.onSearch(data[0].proyectos.concat(data[1].proyectos.concat(data[2].proyectos.concat(data[3].proyectos))),url)
 
 
 	      }

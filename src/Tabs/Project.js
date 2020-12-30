@@ -46,9 +46,9 @@ class Project extends Component {
 			  	width="100%" 
 			  	height="auto" 
 			  	src={"https://www.youtube.com/embed/" + this.state.project.code} 
-			  	frameborder="0" 
+			  	frameBorder="0" 
 			  	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-			  	allowfullscreen>
+			  	allowFullScreen>
 			  </iframe>
 			  <Card.Body className="try h-100">
 			    <Card.Text className="project_card_text">
