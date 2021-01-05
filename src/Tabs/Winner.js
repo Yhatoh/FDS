@@ -5,7 +5,6 @@ import React, {Component} from 'react';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import {BiCaretRightCircle} from 'react-icons/bi';
 import '../static/icon.css';
 import {RiFacebookBoxFill} from 'react-icons/ri';
 import {RiInstagramLine} from 'react-icons/ri';
@@ -17,12 +16,9 @@ class Winner extends Component {
 
   constructor(props){
     super(props)
-    console.log(this.props.xd)
     this.state = {
     	project: this.props.xd,
     }
-
-    console.log(this.state.project.name)
   }
 
   render(){
@@ -30,7 +26,7 @@ class Winner extends Component {
         <Container className="wrapper">
         <Card className="winner_card">
         <Card.Body>
-            <Card.Title className="winner_text winner_title">{"Ganador: "+this.state.project.categoria}</Card.Title>
+            <Card.Title className="winner_text winner_title">{"Ganador: "+(this.state.project.categoria === ""? (this.state.project.name === "HolSense"? "Mejor rendimiento academico San joaquin" : "Mejor rendimiento academico Casa Central") : this.state.project.categoria)}</Card.Title>
         <Card className="project_win_card">
     	
             <Sparkles  
@@ -59,6 +55,7 @@ class Winner extends Component {
 			</Card.Header>
     		
 			  <iframe 
+			  	title= "pa"
 			  	width="100%" 
 			  	height="auto" 
 			  	src={"https://www.youtube.com/embed/" + this.state.project.code} 
@@ -71,13 +68,14 @@ class Winner extends Component {
 			      {this.state.project.descripcion}
 			    </Card.Text>
 			  </Card.Body>
+			{(this.state.project.categoria === ""? <div></div>:
 			<Card.Footer className="mb-5 foot">
 				
 			  	<Card.Text className={"category" + (this.state.project.type === 1 ? "1": "2")}>
 			  		{this.state.project.categoria}
 			  	</Card.Text>
 			</Card.Footer>
-				
+			)}	
 			</Card>
         <img className="infoi" border="0" alt="W3Schools" src="https://png.pngtree.com/svg/20170904/the_golden_crown_309708.png" width="80" height="90"/>
         </Card.Body>

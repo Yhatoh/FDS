@@ -15,7 +15,9 @@ class Timeline extends Component {
   constructor(props){
   	super(props)
   	const val = (this.props.year === '2019' ? 2 : (this.props.year === '2018' ? 1 : 0))
-  	this.state = { value: val, 
+	  this.state = { value: val, 
+						actual: this.props.actual,
+						year: this.props.year,
   						previous: val,
   						data2019: this.props.data2019,
   						data2018: this.props.data2018,
@@ -31,7 +33,6 @@ class Timeline extends Component {
   		const year = (e === 2 ? "2019" : (e === 1 ? "2018" : "2017"))
   		window.location.href = "/"+ year
   	}
-  	console.log(e)
   }
 
   render() {
@@ -90,18 +91,24 @@ class Timeline extends Component {
 		      	
 	      }
 		  {this.state.value === 2 ?  	
-	      	<ControllTabs 
+			  <ControllTabs
+			actual = {this.state.actual}
+			year = {this.state.year} 
 	      	catName1="Inteligencia Artificial y Ciencia de Datos"
 	      	catName2="Transformación Digital y Social"
 	      	cat1={this.state.data2019.IA} 
 	      	cat2={this.state.data2019.TD}/> :
 	      	(this.state.value === 1 ? 
-	      		<ControllTabs 
+				  <ControllTabs
+				actual = {this.state.actual}
+				year = {this.state.year}
 		      	catName1="Educación y Salud"
 		      	catName2="Transformación Digital y Social"
 		      	cat1={this.state.data2018.IA} 
 		      	cat2={this.state.data2018.TD}/> :
-		      	<ControllTabs 
+				  <ControllTabs 
+				actual = {this.state.actual}
+				year = {this.state.year}
 		      	catName1=""
 		      	catName2=""
 		      	cat1={this.state.data2017.IA} 

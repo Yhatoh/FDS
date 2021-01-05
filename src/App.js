@@ -6,8 +6,6 @@ import NavTop from './global/NavTop';
 import Footer from './global/Footer';
 import Banner from './global/Banner';
 import ControllTabs from './Tabs/ControllTabs';
-import Winner from './Tabs/Winner';
-import Container from 'react-bootstrap/esm/Container';
 import Timeline from './global/Timeline';
 import Buscado from './Tabs/Buscado';
 
@@ -478,14 +476,14 @@ class App extends Component {
 		      			descripcion: "Pls permite a usuarios prestarse ayuda y pedir cosas de carácter urgente a través de una aplicación móvil con geolocalización."
 		      		},
 		      		{
-						  name: "SmartCrop",
+						  name: "Zoome",
 						  web:"https://www.google.com",
 						  fb:"https://www.google.com",
 						  ig:"https://www.google.com",
 		      			type: 1,
 		      			categoria: "",
-		      			code: "NT9TbKhEUJ8",
-		      			descripcion: "SmartCrop deberá asistir al usuario derribando las principales barreras para el cultivo en interiores: la falta de tiempo y conocimiento."
+		      			code: "dsEO5Q1UrkE",
+		      			descripcion: "¡Aumenta tus ventas on-line dándole una apariencia profesional a las fotografías de tus productos de manera fácil y económica con Zoome! "
 		      		}
       			],
       		
@@ -497,16 +495,12 @@ class App extends Component {
 		let buscado = name.split("_").join(" ")
 		let encontrado = "";
 		let objeto;
-		console.log(buscado)
-		console.log(info)
-		let i;
 		for (const object in info){
 			if(info[object].name === buscado){
 				
 				encontrado = buscado
 				objeto = info[object]
 			}
-			console.log("XDDD")
 		}
 		
 		return (encontrado === "") ? <h1>404 PAGE NOT FOUND</h1> : <Buscado xd={objeto}/>
@@ -527,7 +521,7 @@ class App extends Component {
 	      <div className="bg-dark">
 	      {(url === "2019" || url === "2018" || url === "2017") ? 
 	      	
-	      	<Timeline year={url} data2019={this.state.data2019} data2018={this.state.data2018} data2017={this.state.data2018}/> 
+	      	<Timeline year={url} data2019={this.state.data2019} data2018={this.state.data2018} data2017={this.state.data2017} actual = {data}/> 
 			:
 			(url === "")? 
 				<>

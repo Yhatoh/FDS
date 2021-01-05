@@ -39,6 +39,7 @@ class Project extends Component {
 			</Card.Header>
     		
 			  <iframe 
+			  	title = {this.state.project.code}
 			  	width="100%" 
 			  	height="auto" 
 			  	src={"https://www.youtube.com/embed/" + this.state.project.code} 
@@ -51,12 +52,13 @@ class Project extends Component {
 			      {this.state.project.descripcion}
 			    </Card.Text>
 			  </Card.Body>
+			{( this.state.project.categoria === ""? <div></div>:
 			<Card.Footer className="mb-5 foot">
-				
 			  	<Card.Text className={"category" + (this.state.project.type === 1 ? "1": "2")}>
 			  		{this.state.project.categoria}
 			  	</Card.Text>
 			</Card.Footer>
+			)}
 				
 			</Card>
 			</div>

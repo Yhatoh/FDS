@@ -53,13 +53,14 @@ class Buscado extends Component {
 			      {this.state.project.descripcion}
 			    </Card.Text>
 			  </Card.Body>
+			{( this.state.project.categoria === ""? <div></div>:
 			<Card.Footer className="mb-5 foot">
 				
 			  	<Card.Text className={"category" + (this.state.project.type === 1 ? "1": "2")}>
 			  		{this.state.project.categoria}
 			  	</Card.Text>
 			</Card.Footer>
-				
+			)}	
 			</Card>
 			</Col>
 			<Col xs={12} sm={12} md={4} lg={4} xl={4}></Col>

@@ -35,7 +35,6 @@ class Search extends Component {
     //proyectos = this.props.actual.IA.concat(this.props.actual.TD);
     const year = this.props.year
     proyectos = []
-   
     if(year === ""){
         this.props.actual[0].proyectos.map((proyecto)=>(proyectos.push(proyecto.name )))
     }
