@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import Project from './Project';
+import Search from '../global/Search.js';
 
 class ControllTabs extends Component {
 
@@ -16,6 +17,8 @@ class ControllTabs extends Component {
     var gener = this.props.cat1.concat(this.props.cat2)
     gener.sort((a, b) => a.name.localeCompare(b.name))
     this.state = {
+      year: this.props.year,
+      actual: this.props.actual,
       key: 'gen',
       gen: gener,
       catName1: this.props.catName1,
@@ -34,11 +37,12 @@ class ControllTabs extends Component {
   render(){
     return (
       <Tabs className="custom-tabs nav-fill mb-4" activeKey={this.state.key} id="controlled-tab" onSelect={this.changeState}>
-        <Tab eventKey="gen" title="General">
+        <Tab eventKey="gen" title="Todos los Proyectos">
+        <Search actual={this.state.actual} year= {this.state.year} />
           <Container className="bg-dark" fluid>
             <Row>
               { this.state.gen.map((project) =>
-                <Col xs={12} sm={6} md={6} lg={4} xl={4}>
+                <Col xs={12} sm={12} md={6} lg={4} xl={4}>
                   <div key={project.code}>
                     <Project xd={project} key = {project.code}/>
                   </div>
@@ -49,10 +53,11 @@ class ControllTabs extends Component {
         </Tab>
         { this.state.catName1 !== "" ?
           <Tab eventKey="ia_dc" title={this.state.catName1}>
+            <Search actual={this.state.actual} year= {this.state.year}/>
             <Container className="bg-dark" fluid>
               <Row>
                 { this.state.cat1.map((project) =>
-                  <Col xs={12} sm={6} md={6} lg={4} xl={4}>
+                  <Col xs={12} sm={12} md={6} lg={4} xl={4}>
                     <div key={project.code}>
                       <Project xd={project} key = {project.code}/>
                     </div>
@@ -63,10 +68,11 @@ class ControllTabs extends Component {
           </Tab> : <></>}
         { this.state.catName1 !== "" ?
           <Tab eventKey="tds" title={this.state.catName2}>
+            <Search actual={this.state.actual} year= {this.state.year} />
             <Container className="bg-dark" fluid>
               <Row>
                 { this.state.cat2.map((project) =>
-                  <Col xs={12} sm={6} md={6} lg={4} xl={4}>
+                  <Col xs={12} sm={12} md={6} lg={4} xl={4}>
                     <div key={project.code}>
                       <Project xd={project} key = {project.code}/>
                     </div>

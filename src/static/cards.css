@@ -1,6 +1,12 @@
 .project_card {
 	background-color: #020100; 
 	color: #FDFFFC;
+	height: 500px;
+	margin-bottom: 10%; 
+}
+.project_win_card {
+	background-color: #020100; 
+	color: #FDFFFC;
 	height: 400px;
 	margin-bottom: 10%; 
 }
@@ -19,7 +25,7 @@
 }
 
 .project_card_text {
-	font-size: 12px;
+	font-size: 14px;
 }
 .winner_title{
 	background-color: #43360e;
@@ -41,3 +47,11 @@
 .specialrow {   
 	width : 98%;
   }
+
+.foot{
+	border-top:1px solid #FFFFFF !important;
+	height: 5%;
+}
+.minicont{
+	height: 50%;
+}

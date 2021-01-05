@@ -80,3 +80,7 @@ a:hover {
 .navtugle {
   border-color : white
 }
+
+.nav-text{
+  font-size: 20px;
+}

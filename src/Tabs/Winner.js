@@ -10,6 +10,7 @@ import '../static/icon.css';
 import {RiFacebookBoxFill} from 'react-icons/ri';
 import {RiInstagramLine} from 'react-icons/ri';
 import Container from 'react-bootstrap/Container';
+import {BiWorld} from 'react-icons/bi';
 
 import Sparkles from 'react-sparkle';
 class Winner extends Component {
@@ -30,7 +31,7 @@ class Winner extends Component {
         <Card className="winner_card">
         <Card.Body>
             <Card.Title className="winner_text winner_title">{"Ganador: "+this.state.project.categoria}</Card.Title>
-        <Card className="project_card">
+        <Card className="project_win_card">
     	
             <Sparkles  
                 color="gold"
@@ -40,27 +41,23 @@ class Winner extends Component {
                 fadeOutSpeed={30}
                 flicker={false} 
             />
-            <Card.Body className="mb-5">
+            <Card.Header>
 			    <Row> 
-					<Col xs = "9">
+					<Col xs={6} sm={6} md={6} lg={8} xl={8}>
 						<Card.Title>{this.state.project.name} </Card.Title>
 					</Col>
 
-					<Col>
-						<Row>
-							<Col xs = "1"></Col>
-							<Col>
-								<a href={this.state.project.fb}><RiFacebookBoxFill  className= 'icon-pad'size = "1.1em"/></a>
-								<a href={this.state.project.ig}><RiInstagramLine className= 'icon-pad'  size = "1.1em"/></a>
-							</Col>
+					<Col xs={6} sm={6} md={6} lg={4} xl={4}>
+						
+					<Row className = "justify-content-end">
+								<a href={this.state.project.web}><BiWorld className='icon-pad' size = "2em"></BiWorld></a>
+								<a href={this.state.project.fb}><RiFacebookBoxFill  className= 'icon-pad'size = "2em"/></a>
+								<a href={this.state.project.ig}><RiInstagramLine className= 'icon-pad'  size = "2em"/></a>
 						</Row>
 					</Col>
-					
 				</Row>
-			  	<Card.Text className={"category" + (this.state.project.type === 1 ? "1": "2")}>
-			  		{this.state.project.categoria}
-			  	</Card.Text>
-			  </Card.Body>
+			</Card.Header>
+    		
 			  <iframe 
 			  	width="100%" 
 			  	height="auto" 
@@ -74,7 +71,13 @@ class Winner extends Component {
 			      {this.state.project.descripcion}
 			    </Card.Text>
 			  </Card.Body>
-				<Row><Col xs="10"></Col><Col><a href={this.state.project.web}><BiCaretRightCircle className='icon-left icon-marg-bottom' size = "2em"></BiCaretRightCircle></a></Col></Row>
+			<Card.Footer className="mb-5 foot">
+				
+			  	<Card.Text className={"category" + (this.state.project.type === 1 ? "1": "2")}>
+			  		{this.state.project.categoria}
+			  	</Card.Text>
+			</Card.Footer>
+				
 			</Card>
         <img className="infoi" border="0" alt="W3Schools" src="https://png.pngtree.com/svg/20170904/the_golden_crown_309708.png" width="80" height="90"/>
         </Card.Body>

@@ -5,6 +5,7 @@ import theme from '../static/theme.module.css';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 let proyectos;
 const getSuggestions = value => {
     const inputValue = value.trim().toLowerCase();
@@ -13,7 +14,7 @@ const getSuggestions = value => {
     return inputLength === 0 ? [] : proyectos.filter(lang =>
       lang.toLowerCase().slice(0, inputLength) === inputValue
     );
-  };
+};
 
 
 
@@ -32,17 +33,26 @@ class Search extends Component {
         suggestions: []
     };
     //proyectos = this.props.actual.IA.concat(this.props.actual.TD);
+    const year = this.props.year
     proyectos = []
-    this.props.actual[0].proyectos.map((proyecto)=>(proyectos.push(proyecto.name + " - 2020"))) 
-    this.props.actual[1].proyectos.map((proyecto)=>(proyectos.push(proyecto.name + " - 2019"))) 
-    this.props.actual[2].proyectos.map((proyecto)=>(proyectos.push(proyecto.name + " - 2018"))) 
-    this.props.actual[3].proyectos.map((proyecto)=>(proyectos.push(proyecto.name + " - 2017")))
+   
+    if(year === ""){
+        this.props.actual[0].proyectos.map((proyecto)=>(proyectos.push(proyecto.name )))
+    }
+    else if(year === "2019"){ 
+      this.props.actual[1].proyectos.map((proyecto)=>(proyectos.push(proyecto.name )))
+    }
+    else if(year === "2018"){ 
+      this.props.actual[2].proyectos.map((proyecto)=>(proyectos.push(proyecto.name )))
+    }
+    else if(year === "2017"){ 
+      this.props.actual[3].proyectos.map((proyecto)=>(proyectos.push(proyecto.name )))
+    }
   }
   getSuggestionValue = suggestion => {
     this.setState({
         value : suggestion
     });
-    console.log(this.state.value)
     return suggestion
     }
   onChange = (event, { newValue }) => {
@@ -68,16 +78,23 @@ class Search extends Component {
 
   onDone = (event, { suggestion, suggestionValue, suggestionIndex, sectionIndex, method }) =>{
       let nombre = suggestionValue.split(" - ")[0]
-      let aux = nombre.split(" ")
-      nombre = aux.join("_")
-      window.location.href = "/"+ nombre
+      
+      if(proyectos.includes(nombre)){
+        let aux = nombre.split(" ")
+        nombre = aux.join("_")
+        window.location.href = "/"+ nombre
+      }
 
   }
   onDone2 = (m) =>{
     let nombre = this.state.value.split(" - ")[0]
-    let aux = nombre.split(" ")
-    nombre = aux.join("_")
-    window.location.href = "/"+ nombre
+    
+    if(proyectos.includes(nombre)){
+      let aux = nombre.split(" ")
+      nombre = aux.join("_")
+      window.location.href = "/"+ nombre
+    }
+    
 
 }
   render(){
@@ -94,7 +111,10 @@ class Search extends Component {
         // Finally, render it!
         return (
         <div>
-        <Row>
+        <Container fluid>
+        <Row className = "justify-content-end" >
+          <Col xs={3} sm={3} md={3} lg={3} xl={3} >
+          <Row className = "justify-content-center">
           <Autosuggest
             suggestions={suggestions}
             onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
@@ -106,7 +126,10 @@ class Search extends Component {
             onSuggestionSelected={this.onDone}
           /> 
           <Button variant="outline-info" onClick = {this.onDone2}>Buscar</Button>
+          </Row>
+          </Col>
         </Row>
+        </Container>
         </div>
         );
     	

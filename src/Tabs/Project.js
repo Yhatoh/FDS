@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import {BiCaretRightCircle} from 'react-icons/bi';
+import {BiWorld} from 'react-icons/bi';
 import '../static/icon.css';
 import {RiFacebookBoxFill} from 'react-icons/ri';
 import {RiInstagramLine} from 'react-icons/ri';
@@ -20,28 +20,24 @@ class Project extends Component {
 
   render(){
     return (
+		<div className = "minicont">
     	<Card className="mt-2 mb-3 project_card">
-    		<Card.Body className="mb-5">
+			<Card.Header>
 			    <Row> 
-					<Col xs = "9">
+					<Col xs={6} sm={6} md={6} lg={8} xl={8}>
 						<Card.Title>{this.state.project.name} </Card.Title>
 					</Col>
 
-					<Col>
-						<Row>
-							<Col xs = "1"></Col>
-							<Col>
-								<a href={this.state.project.fb}><RiFacebookBoxFill  className= 'icon-pad'size = "1.1em"/></a>
-								<a href={this.state.project.ig}><RiInstagramLine className= 'icon-pad'  size = "1.1em"/></a>
-							</Col>
+					<Col xs={6} sm={6} md={6} lg={4} xl={4}>
+					<Row className = "justify-content-end">
+								<a href={this.state.project.web}><BiWorld className='icon-pad' size = "2em"></BiWorld></a>
+								<a href={this.state.project.fb}><RiFacebookBoxFill  className= 'icon-pad'size = "2em"/></a>
+								<a href={this.state.project.ig}><RiInstagramLine className= 'icon-pad'  size = "2em"/></a>
 						</Row>
 					</Col>
-					
 				</Row>
-			  	<Card.Text className={"category" + (this.state.project.type === 1 ? "1": "2")}>
-			  		{this.state.project.categoria}
-			  	</Card.Text>
-			  </Card.Body>
+			</Card.Header>
+    		
 			  <iframe 
 			  	width="100%" 
 			  	height="auto" 
@@ -55,8 +51,15 @@ class Project extends Component {
 			      {this.state.project.descripcion}
 			    </Card.Text>
 			  </Card.Body>
-				<Row><Col xs="10"></Col><Col><a href={this.state.project.web}><BiCaretRightCircle className='icon-left icon-marg-bottom' size = "2em"></BiCaretRightCircle></a></Col></Row>
+			<Card.Footer className="mb-5 foot">
+				
+			  	<Card.Text className={"category" + (this.state.project.type === 1 ? "1": "2")}>
+			  		{this.state.project.categoria}
+			  	</Card.Text>
+			</Card.Footer>
+				
 			</Card>
+			</div>
     );
   }
 }

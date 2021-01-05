@@ -532,7 +532,8 @@ class App extends Component {
 			(url === "")? 
 				<>
 				<Banner />
-				<ControllTabs 
+				<ControllTabs actual= {data}
+				year = {url}
 				catName1="Inteligencia Artificial y Ciencia de Datos"
 				catName2="Transformación Digital y Social"
 				cat1={this.state.data2020.IA} 
