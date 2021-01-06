@@ -511,7 +511,7 @@ class App extends Component {
 
 
 		let url = window.location.href.split("/")
-		url = url[url.length - 1]
+		url = url[url.length - 1].split("#")[0]
 		var data = [{anos:'2020', proyectos: this.state.data2020.IA.concat(this.state.data2020.TD)}, {anos:'2019', proyectos: this.state.data2019.IA.concat(this.state.data2019.TD)},
 		{anos:'2018', proyectos: this.state.data2018.IA.concat(this.state.data2018.TD)}, {anos:'2017', proyectos: this.state.data2017.IA.concat(this.state.data2017.TD)}]
 	  return (

@@ -79,23 +79,23 @@ function Footer() {
 				<Col xs = "2"> 
 					<br></br>
 					<div className = "footerGrande">XXVIII Feria de Software Virtual</div>
-					<div className = "footerPequeño"> 2020</div> 
-					<a className = "footerMediano" href="https://www.inf.utfsm.cl">Departamento de Informática</a>
-					<div className = "footerPequeño"> Universidad Técnica Federico Santa María</div> 
+					<div className = "footerGrande"> 2020</div> 
+					<a className = "footerMediano" href="https://www.inf.utfsm.cl"><b>Departamento de Informática</b></a>
+					<div className = "footerMediano"><b> Universidad Técnica Federico Santa María</b></div> 
 					<br></br>
 					<a href="https://www.facebook.com/feriadesoftwareutfsm/"><FaFacebookF size = "2em"/>  </a> <a href="https://twitter.com/FeriaSoftware"> <FaTwitter size = "2em"/> </a>
 				</Col>
 				<Col xs = "2"> 
 					<br></br>
-					<div className = "footerMediano">Campus Casa Central Valparaíso</div> 
-					<div className = "footerPequeño"> <MdLocationOn size = "1.3em"/>   Av.España 1680, Valparaíso</div> 
-					<div className = "footerPequeño"> <MdLocalPhone size = "1.3em"/>   +56 (32) 2654242</div> 
+					<div className = "footerMediano"><b>Campus Casa Central Valparaíso</b></div> 
+					<div className = "footerMediano"> <MdLocationOn size = "1.3em"/>   Av.España 1680, Valparaíso</div> 
+					<div className = "footerMediano"> <MdLocalPhone size = "1.3em"/>   +56 (32) 2654242</div> 
 					<br></br>
-					<div className = "footerMediano">Campus Santiago San Joaquín</div> 
-					<div className = "footerPequeño"> <MdLocationOn size = "1.3em"/>   Av. Vicuña Mackenna 3939, Santiago</div> 
-					<div className = "footerPequeño"> <MdLocalPhone size = "1.3em"/>   +56 (2) 2303 7200</div> 
+					<div className = "footerMediano"><b>Campus Santiago San Joaquín</b></div> 
+					<div className = "footerMediano"> <MdLocationOn size = "1.3em"/>   Av. Vicuña Mackenna 3939, Santiago</div> 
+					<div className = "footerMediano"> <MdLocalPhone size = "1.3em"/>   +56 (2) 2303 7200</div> 
 					<br></br>
-					<a className = "footerCorr" href= "mailto:feria@inf.utfsm.cl">  <MdMail size = "1.4em"/>    feria@inf.utfsm.cl</a> 
+					<a className = "footerCorr" href= "mailto:feria@inf.utfsm.cl">  <MdMail size = "1.4em"/>   feria@inf.utfsm.cl</a> 
 					<br></br>
 				</Col>
 				<Col>

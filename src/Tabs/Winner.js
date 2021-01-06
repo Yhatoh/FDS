@@ -69,7 +69,7 @@ class Winner extends Component {
 			    </Card.Text>
 			  </Card.Body>
 			{(this.state.project.categoria === ""? <div></div>:
-			<Card.Footer className="mb-5 foot">
+			<Card.Footer className="mb-4 foot">
 				
 			  	<Card.Text className={"category" + (this.state.project.type === 1 ? "1": "2")}>
 			  		{this.state.project.categoria}

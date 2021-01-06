@@ -38,11 +38,14 @@ class ControllTabs extends Component {
     return (
       <Tabs className="custom-tabs nav-fill mb-4" activeKey={this.state.key} id="controlled-tab" onSelect={this.changeState}>
         <Tab eventKey="gen" title="Todos los Proyectos">
+       
         <Search actual={this.state.actual} year= {this.state.year} />
+        
+        <br></br>
           <Container className="bg-dark" fluid>
             <Row>
               { this.state.gen.map((project) =>
-                <Col xs={12} sm={12} md={6} lg={4} xl={4}>
+                <Col xs={12} sm={12} md={6} lg={6} xl={4}>
                   <div key={project.code}>
                     <Project xd={project} key = {project.code}/>
                   </div>
@@ -57,7 +60,7 @@ class ControllTabs extends Component {
             <Container className="bg-dark" fluid>
               <Row>
                 { this.state.cat1.map((project) =>
-                  <Col xs={12} sm={12} md={6} lg={4} xl={4}>
+                  <Col xs={12} sm={12} md={6} lg={6} xl={4}>
                     <div key={project.code}>
                       <Project xd={project} key = {project.code}/>
                     </div>
@@ -72,7 +75,7 @@ class ControllTabs extends Component {
             <Container className="bg-dark" fluid>
               <Row>
                 { this.state.cat2.map((project) =>
-                  <Col xs={12} sm={12} md={6} lg={4} xl={4}>
+                  <Col xs={12} sm={12} md={6} lg={6} xl={4}>
                     <div key={project.code}>
                       <Project xd={project} key = {project.code}/>
                     </div>

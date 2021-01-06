@@ -17,15 +17,15 @@
 	margin-bottom: 10%; 
 }
 .category1 {
-	color: #1ADF2E;
+	color: #FDFFFC;
 }
 
 .category2 {
-	color: #2790FF;
+	color: #FDFFFC;
 }
 
 .project_card_text {
-	font-size: 14px;
+	font-size: 16px;
 }
 .winner_title{
 	background-color: #43360e;
@@ -50,7 +50,7 @@
 
 .foot{
 	border-top:1px solid #FFFFFF !important;
-	height: 5%;
+	height: 1%;
 }
 .minicont{
 	height: 50%;

@@ -25,7 +25,7 @@ class Project extends Component {
 			<Card.Header>
 			    <Row> 
 					<Col xs={6} sm={6} md={6} lg={8} xl={8}>
-						<Card.Title>{this.state.project.name} </Card.Title>
+						<Card.Title style={{fontSize: "27px"}}>{this.state.project.name} </Card.Title>
 					</Col>
 
 					<Col xs={6} sm={6} md={6} lg={4} xl={4}>
@@ -47,13 +47,13 @@ class Project extends Component {
 			  	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 			  	allowFullScreen>
 			  </iframe>
-			  <Card.Body className="try h-100">
+			  <Card.Body className="try h-100 mb-2">
 			    <Card.Text className="project_card_text">
 			      {this.state.project.descripcion}
 			    </Card.Text>
 			  </Card.Body>
 			{( this.state.project.categoria === ""? <div></div>:
-			<Card.Footer className="mb-5 foot">
+			<Card.Footer className="mb-4 foot ">
 			  	<Card.Text className={"category" + (this.state.project.type === 1 ? "1": "2")}>
 			  		{this.state.project.categoria}
 			  	</Card.Text>

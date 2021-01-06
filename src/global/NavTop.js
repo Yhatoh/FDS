@@ -11,8 +11,8 @@ function NavTop(props) {
 		  <Navbar bg="dark" variant="grey" expand="lg">
 		  <Navbar.Brand href= "../" ><ResponsiveImage
 								src= { fesw }
-								width={ 125 }
-								height={ 50 }/></Navbar.Brand> 
+								width={ 150 }
+								height={ 75 }/></Navbar.Brand> 
 		  <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-dark navtugle"/>
 		  <Navbar.Collapse id="basic-navbar-nav">
 		    <Nav className="mr-auto nav-text">
